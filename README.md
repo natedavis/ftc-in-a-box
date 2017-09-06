@@ -36,7 +36,7 @@ To generate coins, simply type in the /data directory
 ```
 make generate
 ```
-You will see it will make a new coin. If you type it again you will get another block made. If you want more than a few blocks type
+You will see it will make a new block, and the associated coins. If you type it again you will get another block made. If you want more than a few blocks type
 ```
 make generate BLOCKS=105
 ```
