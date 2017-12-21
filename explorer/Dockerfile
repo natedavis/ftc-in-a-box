@@ -18,8 +18,12 @@ RUN cd /opt/iquidus && \
     git checkout master && \
     npm install --production
 
+ADD crontab /etc/cron.d/iquidus-cron
+RUN chmod 0644 /etc/cron.d/iquidus-cron
+RUN touch /var/log/cron.log
 COPY settings.json /opt/iquidus/settings.json
 
 USER root
 EXPOSE 3001
+
 CMD ["/bin/bash"]

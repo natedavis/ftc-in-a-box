@@ -1,0 +1,4 @@
+*/1 * * * * root ( sleep 15 ; cd /opt/iquidus && /usr/bin/nodejs scripts/sync.js index update >> /var/log/iquidus.log && rm ./tmp/index.pid )
+*/1 * * * * root ( sleep 45 ; cd /opt/iquidus && /usr/bin/nodejs scripts/sync.js index update >> /var/log/iquidus.log )
+*/2 * * * * root ( sleep 10 ; cd /opt/iquidus && /usr/bin/nodejs scripts/sync.js market >> /var/log/iquidus.log )
+*/5 * * * * root ( sleep 10 ; cd /opt/iquidus && /usr/bin/nodejs scripts/peers.js >> /var/log/iquidus.log )

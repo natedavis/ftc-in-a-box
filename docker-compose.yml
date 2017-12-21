@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongodb
       - ftcregtest
-    command: /bin/bash -c "cd /opt/iquidus && npm start"
+    command: /bin/bash -c "service cron start && cd /opt/iquidus && npm start"
   mongodb:
     image: mongo:latest
     container_name: "mongodb"
@@ -28,4 +28,4 @@ services:
       - ./data/db:/data/db
     ports:
       - 27017:27017
-    command: mongod --smallfiles --logpath=/dev/null # --quiet
+    command: mongod --smallfiles --bind_ip 0.0.0.0 --logpath=/dev/null --quiet

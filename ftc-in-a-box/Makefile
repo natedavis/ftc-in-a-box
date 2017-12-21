@@ -10,8 +10,8 @@ AMOUNT=
 ACCOUNT=
 
 start:
-	$(FEATHERCOIN) $(B1) -daemon
-	$(FEATHERCOIN) $(B2) -daemon
+	$(FEATHERCOIN) $(B1) -daemon -txindex
+	$(FEATHERCOIN) $(B2) -daemon -txindex
 
 generate:
 	$(FEATHERCOINCLI) $(B1) setgenerate true $(BLOCKS)

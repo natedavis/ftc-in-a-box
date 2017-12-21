@@ -53,7 +53,7 @@
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 1,
 
   // language settings
   "locale": "locale/en.json",
@@ -62,7 +62,7 @@
   "display": {
     "api": true,
     "markets": false,
-    "richlist": false,
+    "richlist": true,
     "twitter": false,
     "facebook": false,
     "googleplus": false,
@@ -138,7 +138,7 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "GETINFO",
+  "supply": "BALANCES",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
